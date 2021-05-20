@@ -1,36 +1,21 @@
-import { combineReducers } from 'redux';
-import actionTypes from './resultItemCard_types';
+import { combineReducers, createReducer } from '@reduxjs/toolkit';
+import {
+  createItemsRequest,
+  createItemsSuccess,
+  createItemsError,
+} from './resultItemCard_actions';
 
-const nameReducer = (state = '', { type, payload }) => {
-  switch (type) {
-    case actionTypes.CREATE_ITEM:
-      return [...state, payload];
+const items = createReducer([], {
+  [createItemsSuccess]: (_, { payload }) => payload,
+});
 
-    default:
-      return state;
-  }
-};
-// const languageReducer = (state = '', { type, payload }) => {
-//   switch (type) {
-//     case 'result':
-//       break;
-
-//     default:
-//       return state;
-//   }
-// };
-// const descriptionReducer = (state = '', { type, payload }) => {
-//   switch (type) {
-//     case 'result':
-//       break;
-
-//     default:
-//       return state;
-//   }
-// };
+const loading = createReducer(false, {
+  [createItemsRequest]: () => true,
+  [createItemsSuccess]: () => false,
+  [createItemsError]: () => false,
+});
 
 export default combineReducers({
-  name: nameReducer,
-  //   language: 'languageReducer',
-  //   description: 'descriptionReducer',
+  items,
+  loading,
 });

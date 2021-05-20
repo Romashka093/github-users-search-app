@@ -1,26 +1,18 @@
 import { combineReducers } from 'redux';
-import actionTypes from './search_types';
-const queryReducer = (state = '', { type, payload }) => {
-  switch (type) {
-    case actionTypes.VALUE:
-      return (state = payload);
+import { createReducer } from '@reduxjs/toolkit';
+// import itemAction from '../resultItemCard/resultItemCard_actions';
 
-    default:
-      return state;
-  }
-};
+import actions from './search_actions';
 
-const historyReduser = (state = [], { type, payload }) => {
-  switch (type) {
-    case actionTypes.ADD_HISTORY:
-      return [...state, payload];
+const query = createReducer('', {
+  [actions.searchValue]: (_, { payload }) => payload,
+});
 
-    default:
-      return state;
-  }
-};
+const history = createReducer([], {
+  [actions.searchHistory]: (state, { payload }) => [...state, payload],
+});
 
 export default combineReducers({
-  query: queryReducer,
-  history: historyReduser,
+  query,
+  history,
 });

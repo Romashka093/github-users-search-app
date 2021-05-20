@@ -1,13 +1,20 @@
-import { createStore, combineReducers } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import searchReducer from './search/search_reducer';
 import itemReducer from './resultItemCard/resultItemCard_reduser';
+import logger from 'redux-logger';
+// import { applyMiddleware } from 'redux';
+// import createDebounce from 'redux-debounced';
 
-const rootReducer = combineReducers({
-  search: searchReducer,
-  items: itemReducer,
+const middleware = [...getDefaultMiddleware(), logger];
+
+const store = configureStore({
+  reducer: {
+    search: searchReducer,
+    items: itemReducer,
+  },
+  middleware,
+
+  devTools: process.env.NODE_ENV === 'development',
 });
-
-const store = createStore(rootReducer, composeWithDevTools());
 
 export default store;

@@ -1,11 +1,7 @@
-import actionTypes from './search_types';
+/* eslint-disable import/no-anonymous-default-export */
+import { createAction } from '@reduxjs/toolkit';
 
-export const searchValue = value => ({
-  type: actionTypes.VALUE,
-  payload: value,
-});
+const searchValue = createAction('searcher/changeValue');
+const searchHistory = createAction('searcher/createHistory');
 
-export const searchHistory = value => ({
-  type: actionTypes.ADD_HISTORY,
-  payload: value,
-});
+export default { searchValue, searchHistory };

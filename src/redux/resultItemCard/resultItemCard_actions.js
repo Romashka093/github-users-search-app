@@ -1,11 +1,5 @@
-/* eslint-disable import/no-anonymous-default-export */
-import actionsType from './resultItemCard_types';
+import { createAction } from '@reduxjs/toolkit';
 
-const createItem = item => ({
-  type: actionsType.CREATE_ITEM,
-  payload: {
-    ...item,
-  },
-});
-
-export default { createItem };
+export const createItemsRequest = createAction('items/createItemsRequest');
+export const createItemsSuccess = createAction('items/createItemsSuccess');
+export const createItemsError = createAction('items/createItemsError');

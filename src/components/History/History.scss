@@ -1,0 +1,13 @@
+.Histoty {
+    //
+    &__title {
+        //
+    }
+    &__list {
+        display: flex;
+        flex-direction: column-reverse;
+        &-item {
+            //
+        }
+    }
+}

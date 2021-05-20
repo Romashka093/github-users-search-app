@@ -1,12 +1,13 @@
 import React from 'react';
-import api from '../../services/api';
 import { connect } from 'react-redux';
-import * as actions from '../../redux/search/search_actions';
-import './Searcher.scss';
+import debounce from 'lodash/debounce';
+import actions from '../../redux/search/search_actions';
+import History from '../History/History';
+import PropTypes from 'prop-types';
+// import css from './Searcher.scss';
 
-console.log(api.getUsersByName().then(res => console.log(res.data.items)));
-function Searcher({ query, history, onChangeSearchValue, onAddHistory }) {
-  console.log('History', history.length === 0);
+function Searcher({ query, onChangeSearchValue, onAddHistory }) {
+  const changeValueWithDebounce = debounce(onChangeSearchValue, 500);
 
   return (
     <>
@@ -18,23 +19,11 @@ function Searcher({ query, history, onChangeSearchValue, onAddHistory }) {
       >
         <label>
           Search
-          <input onChange={onChangeSearchValue} type="search" />
+          <input onChange={changeValueWithDebounce} type="search" />
         </label>
       </form>
       <>
-        {history.length === 0 ? (
-          <></>
-        ) : (
-          <div>
-            <h3>Search history:</h3>
-            <ul>
-              {/* not more then 5 items */}
-              {history.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        )}
+        <History />
       </>
     </>
   );
@@ -42,12 +31,17 @@ function Searcher({ query, history, onChangeSearchValue, onAddHistory }) {
 
 const mapStateToProps = state => ({
   query: state.search.query,
-  history: state.search.history,
 });
 
 const mapDispatchToProps = dispatch => ({
   onChangeSearchValue: evt => dispatch(actions.searchValue(evt.target.value)),
   onAddHistory: value => dispatch(actions.searchHistory(value)),
 });
+
+Searcher.protoTypes = {
+  query: PropTypes.string,
+  onChangeSearchValue: PropTypes.func.isRequired,
+  onAddHistory: PropTypes.func.isRequired,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Searcher);

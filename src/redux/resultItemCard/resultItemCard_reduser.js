@@ -5,7 +5,7 @@ import {
   createItemsError,
 } from './resultItemCard_actions';
 
-const items = createReducer([], {
+const repositories = createReducer([], {
   [createItemsSuccess]: (_, { payload }) => payload,
 });
 
@@ -15,7 +15,16 @@ const loading = createReducer(false, {
   [createItemsError]: () => false,
 });
 
+const error = createReducer(null, {
+  // [createItemsError]: (_, { payload }) => payload.message,
+  [createItemsError]: (_, { payload }) => ({
+    text: payload.message,
+    statusCode: payload.response.status,
+  }),
+});
+
 export default combineReducers({
-  items,
+  repositories,
   loading,
+  error,
 });

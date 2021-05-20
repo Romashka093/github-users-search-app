@@ -3,13 +3,16 @@ import './Footer.scss';
 
 function Footer() {
   return (
-    <>
-      <div>
-        <p>
-          Created by <span>Anna Romashchenko</span>
+    <footer className="Footer">
+      <div className="Footer__wrap">
+        <p className="Footer__wrap-content">
+          Created by{' '}
+          <span className="Footer__wrap-content-spanning">
+            Anna Romashchenko
+          </span>
         </p>
       </div>
-    </>
+    </footer>
   );
 }
 

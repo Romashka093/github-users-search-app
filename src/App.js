@@ -7,21 +7,12 @@ import Searcher from './components/Searcher/Searcher';
 function App() {
   return (
     <>
-      <header>
-        <Header />
-      </header>
-
-      <main>
-        <section>
-          <Searcher />
-        </section>
-        <section>
-          <ResultList />
-        </section>
+      <Header />
+      <main className="main">
+        <Searcher />
+        <ResultList />
       </main>
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </>
   );
 }

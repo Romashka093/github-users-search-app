@@ -1,0 +1,33 @@
+@import '../../styles/variables.scss';
+.Searcher {
+    color: $secondary_text_color;
+    &__heading {
+        margin: 0 0 20px 0;
+    }
+    &__form {
+        &-label {
+            color: $main_text_color;
+            margin: 0 6px 0 0;
+        }
+        &-input {
+            caret-color: $main_text_color;
+            background-color: $background_item_color;
+            color: $main_color;
+            border: none;
+            border-radius: 24px;
+            padding: 12px;
+            margin: 6px 0 20px 0;
+        }
+        &-input::placeholder {
+            font-style: italic;
+        }
+    }
+}
+
+// @media (min-width: 375px) {}
+// @media (min-width: 768px) {}
+// @media (min-width: 1024px) {}
+// @media (min-width: 1280px) {}
+// @media (min-width: 1366px) {}
+// @media (min-width: 1600px) {}
+// @media (min-width: 1920px) {}

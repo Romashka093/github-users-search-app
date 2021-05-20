@@ -7,6 +7,9 @@ import './History.scss';
 function History({ history, getItems }) {
   useEffect(() => {
     getItems(history.length > 0 ? history[history.length - 1] : '');
+    return () => {
+      getItems(history.length > 0 ? history[history.length - 1] : '');
+    };
   });
 
   return (

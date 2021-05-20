@@ -1,0 +1,28 @@
+@import '../../styles/variables.scss';
+.Footer {
+    flex: 0 0 auto;
+    // position: fixed;
+    // bottom: 0;
+    &__wrap {
+        width: fit-content;
+        padding: 18px 18px 10px;
+        background-color: $background_item_color;
+        color: $main_color;
+        opacity: 0.96;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+        &-content {
+            &-spanning {
+                color: #8d7d21;
+            }
+        }
+    }
+}
+
+// @media (min-width: 375px) {}
+// @media (min-width: 768px) {}
+// @media (min-width: 1024px) {}
+// @media (min-width: 1280px) {}
+// @media (min-width: 1366px) {}
+// @media (min-width: 1600px) {}
+// @media (min-width: 1920px) {}

@@ -1,0 +1,37 @@
+.Header {
+    padding: 20px 0;
+    display: grid;
+    place-items: center;
+    border-bottom: 1px solid;
+    margin: 0 0 20px 0;
+    &__content {
+        display: flex;
+        align-items: center;
+        padding: 0 0 16px 0;
+        &-logo {
+            padding: 16px;
+            &-img {
+                //
+            }
+        }
+        &-name {
+            &-title {
+                //
+            }
+            &-kind {
+                //
+            }
+        }
+    }
+    &__description {
+        //
+    }
+}
+
+// @media (min-width: 375px) {}
+// @media (min-width: 768px) {}
+// @media (min-width: 1024px) {}
+// @media (min-width: 1280px) {}
+// @media (min-width: 1366px) {}
+// @media (min-width: 1600px) {}
+// @media (min-width: 1920px) {}

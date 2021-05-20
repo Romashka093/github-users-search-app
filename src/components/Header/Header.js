@@ -4,18 +4,24 @@ import './Header.scss';
 
 function Header() {
   return (
-    <>
-      <div>
-        <h1>
-          <img src={logo} alt="logo app" width="46" height="46" />
+    <header className="Header">
+      <div className="Header__content">
+        <h1 className="Header__content-logo">
+          <img
+            className="Header__content-logo-img"
+            src={logo}
+            alt="logo app"
+            width="46"
+            height="46"
+          />
         </h1>
-        <div>
-          <h2>requestum</h2>
-          <p>web development company</p>
+        <div className="Header__content-name">
+          <h2 className="Header__content-name-title">requestum</h2>
+          <p className="Header__content-name-kind">web development company</p>
         </div>
       </div>
-      <div>Github users search app</div>
-    </>
+      <div className="Header__description">Github users search app</div>
+    </header>
   );
 }
 

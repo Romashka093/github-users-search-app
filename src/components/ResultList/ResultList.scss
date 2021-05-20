@@ -1,0 +1,44 @@
+@import '../../styles/variables.scss';
+.ResultSection {
+    margin: 0 0 20px 0;
+    &__heading {
+        display: grid;
+        place-items: center;
+        text-align: center;
+        margin: 0 0 16px 0;
+    }
+    &__list {
+        //
+    }
+    &__error {
+        display: grid;
+        place-items: center;
+        color: $background_item_color;
+        font-size: x-large;
+        text-align: center;
+    }
+}
+
+// @media (min-width: 375px) {}
+@media (min-width: 768px) {
+    .ResultSection {
+        //
+        &__heading {
+            //
+        }
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__error {
+            //
+        }
+    }
+}
+
+// @media (min-width: 1024px) {}
+// @media (min-width: 1280px) {}
+// @media (min-width: 1366px) {}
+// @media (min-width: 1600px) {}
+// @media (min-width: 1920px) {}

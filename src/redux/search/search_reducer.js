@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux';
 import { createReducer } from '@reduxjs/toolkit';
-// import itemAction from '../resultItemCard/resultItemCard_actions';
 
 import actions from './search_actions';
 

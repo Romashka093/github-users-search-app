@@ -1,13 +1,30 @@
+@import '../../styles/variables.scss';
 .Histoty {
-    //
+    margin: 0 0 20px 0;
     &__title {
-        //
+        color: $secondary_text_color;
     }
     &__list {
         display: flex;
         flex-direction: column-reverse;
         &-item {
-            //
+            padding: 6px 0;
+            color: $secondary_text_color;
+            cursor: pointer;
+            width: fit-content;
+            &:hover,
+            &:focus,
+            &:active {
+                transform: scale(1, 1.5);
+            }
         }
     }
 }
+
+// @media (min-width: 375px) {}
+// @media (min-width: 768px) {}
+// @media (min-width: 1024px) {}
+// @media (min-width: 1280px) {}
+// @media (min-width: 1366px) {}
+// @media (min-width: 1600px) {}
+// @media (min-width: 1920px) {}

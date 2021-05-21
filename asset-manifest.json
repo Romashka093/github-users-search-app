@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/github-users-search-app/static/css/main.50e7f142.chunk.css",
-    "main.js": "/github-users-search-app/static/js/main.ce909f7e.chunk.js",
-    "main.js.map": "/github-users-search-app/static/js/main.ce909f7e.chunk.js.map",
-    "runtime-main.js": "/github-users-search-app/static/js/runtime-main.b9913ba7.js",
-    "runtime-main.js.map": "/github-users-search-app/static/js/runtime-main.b9913ba7.js.map",
-    "static/js/2.01feabfd.chunk.js": "/github-users-search-app/static/js/2.01feabfd.chunk.js",
-    "static/js/2.01feabfd.chunk.js.map": "/github-users-search-app/static/js/2.01feabfd.chunk.js.map",
-    "static/js/3.866ff23b.chunk.js": "/github-users-search-app/static/js/3.866ff23b.chunk.js",
-    "static/js/3.866ff23b.chunk.js.map": "/github-users-search-app/static/js/3.866ff23b.chunk.js.map",
+    "main.css": "/github-users-search-app/static/css/main.f7622b03.chunk.css",
+    "main.js": "/github-users-search-app/static/js/main.f951bd52.chunk.js",
+    "main.js.map": "/github-users-search-app/static/js/main.f951bd52.chunk.js.map",
+    "runtime-main.js": "/github-users-search-app/static/js/runtime-main.efee276a.js",
+    "runtime-main.js.map": "/github-users-search-app/static/js/runtime-main.efee276a.js.map",
+    "static/js/2.f7e139e8.chunk.js": "/github-users-search-app/static/js/2.f7e139e8.chunk.js",
+    "static/js/2.f7e139e8.chunk.js.map": "/github-users-search-app/static/js/2.f7e139e8.chunk.js.map",
+    "static/js/3.234a1391.chunk.js": "/github-users-search-app/static/js/3.234a1391.chunk.js",
+    "static/js/3.234a1391.chunk.js.map": "/github-users-search-app/static/js/3.234a1391.chunk.js.map",
     "index.html": "/github-users-search-app/index.html",
-    "static/css/main.50e7f142.chunk.css.map": "/github-users-search-app/static/css/main.50e7f142.chunk.css.map",
-    "static/js/2.01feabfd.chunk.js.LICENSE.txt": "/github-users-search-app/static/js/2.01feabfd.chunk.js.LICENSE.txt",
-    "static/media/GitHub.4cc7cf2e.svg": "/github-users-search-app/static/media/GitHub.4cc7cf2e.svg",
+    "static/css/main.f7622b03.chunk.css.map": "/github-users-search-app/static/css/main.f7622b03.chunk.css.map",
+    "static/js/2.f7e139e8.chunk.js.LICENSE.txt": "/github-users-search-app/static/js/2.f7e139e8.chunk.js.LICENSE.txt",
     "static/media/main.scss": "/github-users-search-app/static/media/roboto-condensed-v19-latin_cyrillic-regular.7126742a.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.b9913ba7.js",
-    "static/js/2.01feabfd.chunk.js",
-    "static/css/main.50e7f142.chunk.css",
-    "static/js/main.ce909f7e.chunk.js"
+    "static/js/runtime-main.efee276a.js",
+    "static/js/2.f7e139e8.chunk.js",
+    "static/css/main.f7622b03.chunk.css",
+    "static/js/main.f951bd52.chunk.js"
   ]
 }

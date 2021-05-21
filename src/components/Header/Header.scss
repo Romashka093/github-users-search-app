@@ -1,37 +1,64 @@
+@import '../../styles/variables.scss';
 .Header {
-    padding: 20px 0;
+    display: -ms-grid;
     display: grid;
     place-items: center;
     border-bottom: 1px solid;
-    margin: 0 0 20px 0;
+    margin: 20px 0;
     &__content {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
-        padding: 0 0 16px 0;
+        margin: 0 0 4px 0;
         &-logo {
-            padding: 16px;
+            padding: 8px;
             &-img {
-                //
+                fill: $main_text_color;
+                width: 62px;
             }
         }
         &-name {
             &-title {
-                //
+                font-size: xx-large;
             }
             &-kind {
-                //
+                font-size: smaller;
             }
         }
     }
     &__description {
-        //
+        margin: 0 0 16px 0;
     }
 }
 
-// @media (min-width: 375px) {}
-// @media (min-width: 768px) {}
-// @media (min-width: 1024px) {}
-// @media (min-width: 1280px) {}
-// @media (min-width: 1366px) {}
-// @media (min-width: 1600px) {}
-// @media (min-width: 1920px) {}
+@media (min-width: 375px) {
+    .Header {
+        margin: 24px 0;
+        &__content {
+            margin: 0 0 8px 0;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .Header {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        &__content {
+            margin: 0 0 20px 0;
+            &-logo {
+                padding: 8px 8px 0 0;
+            }
+        }
+    }
+}

@@ -9,7 +9,8 @@ function Footer() {
           Created by{' '}
           <span className="Footer__wrap-content-spanning">
             Anna Romashchenko
-          </span>
+          </span>{' '}
+          🌼
         </p>
       </div>
     </footer>

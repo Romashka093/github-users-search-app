@@ -11,15 +11,20 @@ function ResultList({ items, isLoading, error }) {
         <>
           {items.length > 0 ? (
             <section className="ResultSection">
-              {/* {isLoading && (
+              {isLoading ? (
                 <h3 className="ResultSection__heading">is loading...</h3>
-              )} */}
-              <h2 className="ResultSection__heading">Here is your result</h2>
-              <ul className="ResultSection__list">
-                {items.map(item => (
-                  <ResultCard key={item.id} item={item} />
-                ))}
-              </ul>
+              ) : (
+                <>
+                  <h2 className="ResultSection__heading">
+                    Here is your result
+                  </h2>
+                  <ul className="ResultSection__list">
+                    {items.map(item => (
+                      <ResultCard key={item.id} item={item} />
+                    ))}
+                  </ul>
+                </>
+              )}
             </section>
           ) : (
             <></>

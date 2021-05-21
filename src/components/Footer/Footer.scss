@@ -1,28 +1,30 @@
 @import '../../styles/variables.scss';
 .Footer {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    // position: fixed;
-    // bottom: 0;
     &__wrap {
-        width: fit-content;
+        text-align: right;
+        font-size: small;
         padding: 18px 18px 10px;
-        background-color: $background_item_color;
-        color: $main_color;
+        color: $main_text_color;
         opacity: 0.96;
         border-top-left-radius: 24px;
         border-top-right-radius: 24px;
+        border: 1px solid $main_text_color;
+        border-bottom: none;
         &-content {
             &-spanning {
-                color: #8d7d21;
+                color: $main_text_color;
             }
         }
     }
 }
 
-// @media (min-width: 375px) {}
-// @media (min-width: 768px) {}
-// @media (min-width: 1024px) {}
-// @media (min-width: 1280px) {}
-// @media (min-width: 1366px) {}
-// @media (min-width: 1600px) {}
-// @media (min-width: 1920px) {}
+@media (min-width: 375px) {
+    .Footer {
+        &__wrap {
+            font-size: medium;
+        }
+    }
+}

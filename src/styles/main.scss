@@ -95,15 +95,15 @@ a:active {
     body {
         width: 680px;
     }
-    .main {
-        display: flex;
-        flex-wrap: wrap;
-    }
 }
 
 @media (min-width: 1024px) {
     body {
         width: 960px;
+    }
+    .main {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 

@@ -2,15 +2,14 @@
 .ResultSection {
     margin: 0 0 20px 0;
     &__heading {
+        display: -ms-grid;
         display: grid;
         place-items: center;
         text-align: center;
         margin: 0 0 16px 0;
     }
-    &__list {
-        //
-    }
     &__error {
+        display: -ms-grid;
         display: grid;
         place-items: center;
         color: $background_item_color;
@@ -19,26 +18,29 @@
     }
 }
 
-// @media (min-width: 375px) {}
 @media (min-width: 768px) {
     .ResultSection {
-        //
-        &__heading {
-            //
-        }
         &__list {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
             justify-content: space-between;
-        }
-        &__error {
-            //
         }
     }
 }
 
-// @media (min-width: 1024px) {}
-// @media (min-width: 1280px) {}
-// @media (min-width: 1366px) {}
-// @media (min-width: 1600px) {}
-// @media (min-width: 1920px) {}
+@media (min-width: 1024px) {
+    .ResultSection {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1366px) {
+    .ResultSection {
+        width: 70%;
+    }
+}

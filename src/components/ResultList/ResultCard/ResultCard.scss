@@ -5,6 +5,7 @@
     padding: 12px 18px;
     margin: 0 0 16px 0;
     color: $main_color;
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     &__heading {
         margin: 0 0 12px;
@@ -23,28 +24,8 @@
     }
 }
 
-// @media (min-width: 375px) {}
 @media (min-width: 768px) {
     .ResultItem {
-        width: 300px;
-        &__heading {
-            //
-        }
-        &__language {
-            &-data {
-                //
-            }
-        }
-        &__description {
-            &-data {
-                //
-            }
-        }
+        width: 48%;
     }
 }
-
-// @media (min-width: 1024px) {}
-// @media (min-width: 1280px) {}
-// @media (min-width: 1366px) {}
-// @media (min-width: 1600px) {}
-// @media (min-width: 1920px) {}

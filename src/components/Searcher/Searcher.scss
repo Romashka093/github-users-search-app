@@ -8,8 +8,11 @@
         &-label {
             color: $main_text_color;
             margin: 0 6px 0 0;
+            font-style: italic;
+            font-size: smaller;
         }
         &-input {
+            width: 280px;
             caret-color: $main_text_color;
             background-color: $background_item_color;
             color: $main_color;
@@ -18,16 +21,99 @@
             padding: 12px;
             margin: 6px 0 20px 0;
         }
+        &-input::-webkit-input-placeholder {
+            font-style: italic;
+        }
+        &-input::-moz-placeholder {
+            font-style: italic;
+        }
+        &-input:-ms-input-placeholder {
+            font-style: italic;
+        }
+        &-input::-ms-input-placeholder {
+            font-style: italic;
+        }
         &-input::placeholder {
             font-style: italic;
         }
     }
 }
 
-// @media (min-width: 375px) {}
-// @media (min-width: 768px) {}
-// @media (min-width: 1024px) {}
-// @media (min-width: 1280px) {}
-// @media (min-width: 1366px) {}
-// @media (min-width: 1600px) {}
-// @media (min-width: 1920px) {}
+@media (min-width: 375px) {
+    .Searcher {
+        &__form {
+            &-label {
+                margin: 0 12px 0 0;
+            }
+            &-input {
+                width: 340px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .Searcher {
+        &__form {
+            &-input {
+                width: 680px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .Searcher {
+        width: 50%;
+        &__form {
+            &-input {
+                width: 400px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .Searcher {
+        &__form {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .Searcher {
+        width: 30%;
+        &__form {
+            &-input {
+                width: 300px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+    .Searcher {
+        &__form {
+            &-input {
+                width: 340px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    .Searcher {
+        &__form {
+            &-input {
+                padding: 18px;
+            }
+        }
+    }
+}
